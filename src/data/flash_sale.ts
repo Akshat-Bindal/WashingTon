@@ -28,7 +28,7 @@ const flash_sale: DataType[] = [
 		// old_price: 21,
 		// discount: 77,
 		// test: "Sold",
-		title: "Sneaker Shoes",
+		title: "Sneaker",
 	},
 	{
 		id: 3,
@@ -50,6 +50,51 @@ const flash_sale: DataType[] = [
 		// test: "Sold",
 		title: "Hoodie",
 	},
+
+	{
+		id: 5,
+		color: "bg-danger",
+		img: "/assets/img/product/a1.png",
+		new_price: 100,
+		// old_price: 49,
+		// discount: 99,
+		// test: "Sold",
+		title: "Shirt",
+	},
+
+	{
+		id: 6,
+		color: "bg-danger",
+		img: "/assets/img/product/a2.png",
+		new_price: 150,
+		// old_price: 49,
+		// discount: 99,
+		// test: "Sold",
+		title: "Jacket",
+	},
+
+	{
+		id: 7,
+		color: "bg-danger",
+		img: "/assets/img/product/a3.png",
+		new_price: 250,
+		// old_price: 49,
+		// discount: 99,
+		// test: "Sold",
+		title: "FrockCan",
+	},
+
+	{
+		id: 8,
+		color: "bg-danger",
+		img: "/assets/img/product/a4.png",
+		new_price: 300,
+		// old_price: 49,
+		// discount: 99,
+		// test: "Sold",
+		title: "Lehenga",
+	},
+	
 	
 	
 ];

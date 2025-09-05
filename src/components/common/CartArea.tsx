@@ -1,9 +1,13 @@
 "use client";
-import Link from 'next/link';
-import UseCartInfo from '@/hooks/UseCartInfo';
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, decrease_quantity, remove_cart_product } from '@/redux/features/cartSlice';
+import Link from "next/link";
+import UseCartInfo from "@/hooks/UseCartInfo";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addToCart,
+  decrease_quantity,
+  remove_cart_product,
+} from "@/redux/features/cartSlice";
 
 const CartArea = () => {
   const productItem = useSelector((state: any) => state.cart.cart);
@@ -14,7 +18,7 @@ const CartArea = () => {
     e.preventDefault();
   };
 
-  // handle pickup timing 
+  // handle pickup timing
   const [pickupTime, setPickupTime] = useState<string>("");
 
   return (
@@ -22,6 +26,7 @@ const CartArea = () => {
       <div className="page-content-wrapper">
         <div className="container">
           <div className="cart-wrapper-area py-3">
+            {/* Cart Table */}
             <div className="cart-table card mb-3">
               <div className="table-responsive card-body">
                 <table className="table mb-0">
@@ -41,12 +46,20 @@ const CartArea = () => {
                           <img
                             className="rounded"
                             src={item.img}
-                            alt={item.productName || item.name || item.title || "Product"}
+                            alt={
+                              item.productName ||
+                              item.name ||
+                              item.title ||
+                              "Product"
+                            }
                           />
                         </td>
                         <td className="text-center">
                           <Link className="product-title" href="/single-product">
-                            {item.productName || item.name || item.title || "Unnamed Product"}
+                            {item.productName ||
+                              item.name ||
+                              item.title ||
+                              "Unnamed Product"}
                             <span className="mt-1">₹ {item.new_price}</span>
                           </Link>
                         </td>
@@ -119,7 +132,9 @@ const CartArea = () => {
                               name="pickup"
                               onChange={() => setPickupTime("Afternoon")}
                             />
-                            <label htmlFor="afternoon">Afternoon (12PM - 4PM)</label>
+                            <label htmlFor="afternoon">
+                              Afternoon (12PM - 4PM)
+                            </label>
                             <div className="check"></div>
                           </li>
                           <li>
@@ -134,6 +149,11 @@ const CartArea = () => {
                           </li>
                         </ul>
                       </div>
+                      {!pickupTime && (
+                        <p className="text-danger mt-2 small">
+                          Please select a pickup time.
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -144,7 +164,15 @@ const CartArea = () => {
                   <h5>₹ {total}</h5>
                 </div>
 
-                <Link className="btn btn-primary w-100" href="/checkout">
+                <Link
+                  className={`btn w-100 ${
+                    pickupTime ? "btn-primary" : "btn-secondary disabled"
+                  }`}
+                  href={pickupTime ? "/checkout" : "#"}
+                  onClick={(e) => {
+                    if (!pickupTime) e.preventDefault();
+                  }}
+                >
                   Checkout Now
                 </Link>
               </div>

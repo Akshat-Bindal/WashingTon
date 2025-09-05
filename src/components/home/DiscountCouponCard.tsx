@@ -14,11 +14,10 @@ const DiscountCouponCard = () => {
 							/>
 						</div>
 						<div className="text-content">
-							<h5 className="text-white mb-2">Get 20% discount!</h5>
+							<h5 className="text-white mb-2">Get free doorstep pickup & deliver</h5>
 							<p className="text-white mb-0">
-								To get discount, enter the
-								<span className="px-1 fw-bold">GET20</span>code on the checkout
-								page.
+								on minimum 5 kg orders within 5 km in
+								<span className="px-1 fw-bold">Pratap Nagar, Sanganer, Jagatpura, and Sitapura</span>Book now with Washing Ton Laundry Service!
 							</p>
 						</div>
 					</div>

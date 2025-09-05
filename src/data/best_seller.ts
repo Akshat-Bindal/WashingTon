@@ -13,7 +13,7 @@ const best_seller: DataType[] = [
 		id: 1,
 		img: "/assets/img/product/service/1.png",
 		title: "Wash & Stream Iron",
-		new_price: 64,
+		new_price: 75,
 		// old_price: 89,
 		// ratting: 4.88,
 		// review_text: 39,
@@ -22,29 +22,13 @@ const best_seller: DataType[] = [
 		id: 2,
 		img: "/assets/img/product/service/2.png",
 		title: "Wash & Fold",
-		new_price: 99,
+		new_price: 40,
 		// old_price: 159,
 		// ratting: 4.82,
 		// review_text: 125,
 	},
-	{
-		id: 3,
-		img: "/assets/img/product/service/3.png",
-		title: "Dry Clean",
-		new_price: 24,
-		// old_price: 32,
-		// ratting: 4.89,
-		// review_text: 63,
-	},
-	{
-		id: 3,
-		img: "/assets/img/product/service/4.png",
-		title: "Shoe Cleaning",
-		new_price: 11.49,
-		// old_price: 13,
-		// ratting: 4.78,
-		// review_text: 1,
-	},
+	
+	
 ];
 
 export default best_seller;

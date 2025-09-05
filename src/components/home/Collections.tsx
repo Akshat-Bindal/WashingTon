@@ -24,7 +24,7 @@ const Collections = () => {
 					>
 						{collections_products.map((item, i) => (
 							<SwiperSlide key={i} className="card collection-card">
-								<Link href="/single-product">
+								<Link href="/">
 									<img src={item.img} alt="" />
 								</Link>
 								<div className="collection-title">

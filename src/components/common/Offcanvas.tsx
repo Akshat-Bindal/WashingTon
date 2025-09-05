@@ -26,9 +26,9 @@ const Offcanvas = ({ handleShow, show }: any) => {
 						</div>
 						<div className="user-info">
 							<h5 className="user-name mb-1 text-white">Vikram Saini</h5>
-							<p className="available-balance text-white">
+							{/* <p className="available-balance text-white">
 								Current Balance ₹<span className="counter">99</span>
-							</p>
+							</p> */}
 						</div>
 					</div>
 
@@ -39,16 +39,26 @@ const Offcanvas = ({ handleShow, show }: any) => {
 							</Link>
 						</li>
 						<li>
+							<Link href="/change-password">
+								<i className="ti ti-user"></i>Change Password
+							</Link>
+						</li>
+						<li>
+							<Link href="/my-order">
+								<i className="ti ti-notebook"></i>My Order
+							</Link>
+						</li>
+						{/* <li>
 							<Link href="/notifications">
 								<i className="ti ti-bell-ringing lni-tada-effect"></i>
 								Notifications<span className="ms-1 badge badge-warning">3</span>
 							</Link>
-						</li>
+						</li> */}
 						<li className="suha-dropdown-menu">
-							<a href="#">
+							{/* <a href="#">
 								<i className="ti ti-building-store"></i>Shop Pages
-							</a>
-							<ul>
+							</a> */}
+							{/* <ul>
 								<li>
 									<Link href="/shop-grid">Shop Grid</Link>
 								</li>
@@ -64,14 +74,14 @@ const Offcanvas = ({ handleShow, show }: any) => {
 								<li>
 									<Link href="/flash-sale">Flash Sale</Link>
 								</li>
-							</ul>
+							</ul> */}
 						</li>
 						<li>
 							<Link href="/pages">
 								<i className="ti ti-notebook"></i>All Pages
 							</Link>
 						</li>
-						<li className="suha-dropdown-menu">
+						{/* <li className="suha-dropdown-menu">
 							<Link href="/wishlist-grid">
 								<i className="ti ti-heart"></i>My Wishlist
 							</Link>
@@ -83,7 +93,7 @@ const Offcanvas = ({ handleShow, show }: any) => {
 									<Link href="/wishlist-list">Wishlist List</Link>
 								</li>
 							</ul>
-						</li>
+						</li> */}
 						<li>
 							<Link href="/settings">
 								<i className="ti ti-adjustments-horizontal"></i>Settings

@@ -21,7 +21,7 @@ const ForgetPassword = () => {
 							/>
 
 							<div className="register-form mt-5">
-								<form action="/otp-confirm" method="get">
+								<form action="/forget-password-success" method="get">
 									<div className="form-group text-start mb-4">
 										<span>Email</span>
 										<label htmlFor="email">

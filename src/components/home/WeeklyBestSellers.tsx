@@ -17,9 +17,9 @@ const WeeklyBestSellers = () => {
 				<div className="container">
 					<div className="section-heading d-flex align-items-center justify-content-between dir-rtl">
 						<h6>Services</h6>
-						<button className="btn btn-sm btn-light">
+						{/* <button className="btn btn-sm btn-light">
 							View all<i className="ms-1 ti ti-arrow-right"></i>
-						</button>
+						</button> */}
 					</div>
 					<div className="row g-2">
 						{best_seller.map((item, i) => (

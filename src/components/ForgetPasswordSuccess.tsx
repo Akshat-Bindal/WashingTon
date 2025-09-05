@@ -13,8 +13,7 @@ const ForgetPasswordSuccess = () => {
 							</div>
 
 							<p className="text-white mt-3 mb-4">
-								Password recovery email is sent successfully. Please check your
-								inbox!
+								<h4>We’ve sent the password recovery link to your email. Please check your inbox, reset your password, and log in again. </h4>
 							</p>
 							<Link className="btn btn-warning btn-lg" href="/login">
 								Go Home

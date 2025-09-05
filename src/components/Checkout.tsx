@@ -2,12 +2,46 @@
 import Footer from "@/layouts/Footer";
 import HeaderTwo from "@/layouts/HeaderTwo";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Count from "./common/Count";
 import UseCartInfo from "@/hooks/UseCartInfo";
 
 const Checkout = () => {
   const { total } = UseCartInfo();
+  const [laundryType, setLaundryType] = useState("sameDay");
+  const [extraCharge, setExtraCharge] = useState(50); // default to Same Day
+  const [orderPlaced, setOrderPlaced] = useState(false);
+
+  // Calculate final total
+  const finalTotal = total + extraCharge;
+
+  const handleLaundryChange = (type: string, charge: number) => {
+    setLaundryType(type);
+    setExtraCharge(charge);
+  };
+
+  const handleConfirmOrder = () => {
+    // Save order data (mock, can be replaced with API call or localStorage)
+    const orderData = {
+      name: "SUHA JANNAT",
+      email: "care@example.com",
+      phone: "+880 000 111 222",
+      address: "28/C Green Road, BD",
+      laundryType,
+      extraCharge,
+      total: finalTotal,
+    };
+
+    localStorage.setItem("latestOrder", JSON.stringify(orderData));
+
+    // Show success message
+    setOrderPlaced(true);
+
+    // Auto hide notification
+    setTimeout(() => {
+      setOrderPlaced(false);
+    }, 4000);
+  };
 
   return (
     <>
@@ -81,21 +115,39 @@ const Checkout = () => {
                   <div className="shipping-method-choose">
                     <ul className="ps-0">
                       <li>
-                        <input id="sameDay" type="radio" name="laundryType" defaultChecked />
+                        <input
+                          id="sameDay"
+                          type="radio"
+                          name="laundryType"
+                          checked={laundryType === "sameDay"}
+                          onChange={() => handleLaundryChange("sameDay", 50)}
+                        />
                         <label htmlFor="sameDay">
                           Same Day Delivery <span>₹50 extra</span>
                         </label>
                         <div className="check"></div>
                       </li>
                       <li>
-                        <input id="nextDay" type="radio" name="laundryType" />
+                        <input
+                          id="nextDay"
+                          type="radio"
+                          name="laundryType"
+                          checked={laundryType === "nextDay"}
+                          onChange={() => handleLaundryChange("nextDay", 30)}
+                        />
                         <label htmlFor="nextDay">
                           Next Day Delivery <span>₹30 extra</span>
                         </label>
                         <div className="check"></div>
                       </li>
                       <li>
-                        <input id="regularLaundry" type="radio" name="laundryType" />
+                        <input
+                          id="regularLaundry"
+                          type="radio"
+                          name="laundryType"
+                          checked={laundryType === "regularLaundry"}
+                          onChange={() => handleLaundryChange("regularLaundry", 0)}
+                        />
                         <label htmlFor="regularLaundry">
                           Regular <span>3-5 days (Free)</span>
                         </label>
@@ -112,17 +164,27 @@ const Checkout = () => {
               <div className="card-body d-flex align-items-center justify-content-between">
                 <h5 className="total-price mb-0">
                   ₹ <span className="counter">
-                    <Count number={total} />
+                    <Count number={finalTotal} />
                   </span>
                 </h5>
-                <Link className="btn btn-primary" href="/checkout-payment">
+                <button className="btn btn-primary" onClick={handleConfirmOrder}>
                   Confirm Order
-                </Link>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Order success notification */}
+      {orderPlaced && (
+        <div
+          className="toast shadow bg-success text-white position-fixed bottom-0 end-0 m-3 p-3"
+          style={{ zIndex: 9999 }}
+        >
+          ✅ Your order has been placed successfully!
+        </div>
+      )}
 
       <div className="internet-connection-status" id="internetStatus"></div>
       <Footer />

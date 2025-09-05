@@ -4,7 +4,7 @@ import { useState, ChangeEvent, KeyboardEvent } from 'react';
 import { useRouter } from 'next/navigation';
 
 const OtpConfirm = () => {
-	const [otp, setOtp] = useState<string[]>(new Array(4).fill(""));
+	const [otp, setOtp] = useState<string[]>(new Array(6).fill(""));
 	const [notification, setNotification] = useState<string>("");
 	const router = useRouter();
 
