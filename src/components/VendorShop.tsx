@@ -195,7 +195,7 @@ const VendorShop = () => {
 												<span
 													className={`badge rounded-pill badge-${item.badge_color}`}
 												>
-													{item.badge_text}
+													{/* {item.badge_text} */}
 												</span>
 												<a className="wishlist-btn" href="#">
 													<i className="ti ti-heart"></i>
@@ -215,8 +215,8 @@ const VendorShop = () => {
 													{item.title}
 												</Link>
 												<p className="sale-price">
-													$ {item.new_price}
-													<span>$ {item.old_price}</span>
+													$ {item.price}
+													{/* <span>$ {item.old_price}</span> */}
 												</p>
 												<div className="product-rating">
 													<i className="ti ti-star-filled"></i>

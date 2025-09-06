@@ -49,16 +49,16 @@ const WishlistList = () => {
 												</Link>
 												<p className="sale-price">
 													<i className="ti ti-currency-dollar"></i>${" "}
-													{item.new_price}
-													<span>$ {item.old_price}</span>
+													{item.price}
+													{/* <span>$ {item.old_price}</span> */}
 												</p>
 												<div className="product-rating">
 													<i className="ti ti-star-filled"></i>
-													{item.ratting}
+													{/* {item.ratting}
 													<span className="ms-1">
 														{"("} {item.review_text}{" "}
 														{item.review_text > 1 ? "reviews" : "review"} {")"}
-													</span>
+													</span> */}
 												</div>
 											</div>
 										</div>

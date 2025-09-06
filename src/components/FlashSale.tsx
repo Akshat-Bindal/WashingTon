@@ -20,15 +20,15 @@ const FlashSale = () => {
 											<Link href="/single-product">
 												<img src={item.img} alt={item.title} />
 												<span className="product-title">{item.title}</span>
-												<p className="sale-price">
+												{/* <p className="sale-price">
 													${item.new_price}
 													<span className="real-price">${item.old_price}</span>
-												</p>
-												<span className="progress-title">
+												</p> */}
+												{/* <span className="progress-title">
 													{item.discount}% {item.test}
-												</span>
+												</span> */}
 
-												<div className="progress">
+												{/* <div className="progress">
 													<div
 														className={`progress-bar ${item.color}`}
 														role="progressbar"
@@ -37,7 +37,7 @@ const FlashSale = () => {
 														aria-valuemin={0}
 														aria-valuemax={100}
 													></div>
-												</div>
+												</div> */}
 											</Link>
 										</div>
 									</div>

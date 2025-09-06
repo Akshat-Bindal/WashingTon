@@ -37,7 +37,7 @@ const WishlistGrid = () => {
 											<span
 												className={`badge rounded-pill badge-${item.badge_color}`}
 											>
-												{item.badge_text}
+												{/* {item.badge_text} */}
 											</span>
 											<a className="delete-btn" href="#">
 												<i className="ti ti-trash"></i>
@@ -57,8 +57,8 @@ const WishlistGrid = () => {
 												{item.title}
 											</Link>
 											<p className="sale-price">
-												$ {item.new_price}
-												<span>$ {item.old_price}</span>
+												$ {item.price}
+												{/* <span>$ {item.old_price}</span> */}
 											</p>
 											<div className="product-rating">
 												<i className="ti ti-star-filled"></i>

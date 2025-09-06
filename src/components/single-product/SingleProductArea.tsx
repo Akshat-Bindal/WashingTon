@@ -341,7 +341,7 @@ const SingleProductArea = ({ product }: any) => {
 													<span
 														className={`badge rounded-pill badge-${item.badge_color}`}
 													>
-														{item.badge_text}
+														{/* {item.badge_text} */}
 													</span>
 													<a className="wishlist-btn" href="#">
 														<i className="ti ti-heart"></i>
@@ -363,8 +363,8 @@ const SingleProductArea = ({ product }: any) => {
 													</Link>
 
 													<p className="sale-price">
-														$ {item.new_price}
-														<span>$ {item.old_price}</span>
+														$ {item.price}
+														{/* <span>$ {item.old_price}</span> */}
 													</p>
 
 													<div className="product-rating">
