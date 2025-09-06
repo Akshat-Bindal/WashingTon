@@ -60,7 +60,7 @@ const CartArea = () => {
                               item.name ||
                               item.title ||
                               "Unnamed Product"}
-                            <span className="mt-1">₹ {item.new_price}</span>
+                            <span className="mt-1">₹ {item.price}</span>
                           </Link>
                         </td>
                         <td>

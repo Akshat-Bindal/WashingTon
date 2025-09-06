@@ -3,25 +3,25 @@ const product_catagories = [
     id: 1,
     img: "/assets/img/core-img/washfold.png",
     title: "Wash & Fold",
-    price: 120,
+    price: 40,
   },
   {
     id: 2,
     img: "/assets/img/core-img/washiron.png",
     title: "Wash & Iron",
-    price: 150,
+    price: 75,
   },
   {
     id: 3,
     img: "/assets/img/core-img/dryclean.png",
     title: "Dry Clean",
-    price: 200,
+    price: 100,
   },
   {
     id: 4,
     img: "/assets/img/core-img/shoe.png",
     title: "Shoe Care",
-    price: 180,
+    price: 250,
   },
   {
     id: 5,
@@ -39,13 +39,13 @@ const product_catagories = [
     id: 7,
     img: "/assets/img/core-img/carpet.png",
     title: "Carpet Cleaning",
-    price: 400,
+    price: 1000,
   },
   {
     id: 8,
     img: "/assets/img/core-img/raffu.png",
     title: "Fabric Darning",
-    price: 220,
+    price: 250,
   },
 ];
 

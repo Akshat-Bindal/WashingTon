@@ -2,15 +2,23 @@
 import React from "react";
 import flash_sale from "@/data/flash_sale";
 import { useDispatch } from "react-redux";
-import { addToCart } from "@/redux/features/cartSlice"; // 👈 import action
+import { addToCart } from "@/redux/features/cartSlice"; 
 import { toast } from "react-toastify";
 
 const FlashSale = () => {
   const dispatch = useDispatch();
 
   const handleOrder = (item: any) => {
-    dispatch(addToCart(item)); // 👈 add product to redux cart
-    toast.success(`${item.title} added to cart ✅`, { autoClose: 2000 });
+    const productData = {
+      id: String(item.id),
+      img: item.img,
+      title: item.title,
+      price: Number(item.new_price) || 0, // ✅ FIXED
+      quantity: 1,
+    };
+
+    dispatch(addToCart(productData));
+    // toast.success(`${item.title} added to cart ✅`, { autoClose: 2000 });
   };
 
   return (

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux"; 
 
 interface CartItem {
-  new_price: number;
+  price: number;
   quantity: number; 
 }
 
@@ -22,8 +22,9 @@ const UseCartInfo = () => {
   useEffect(() => {
     const cart: CartSummary = cartItems.reduce(
       (cartTotal: CartSummary, cartItem: CartItem) => { 
-        const {new_price, quantity } = cartItem;
-        const itemTotal = new_price * quantity; 
+     const price = Number(cartItem.price) || 0;
+      const quantity = Number(cartItem.quantity) || 0;
+            const itemTotal = price * quantity;
 
         cartTotal.total += itemTotal;
         cartTotal.quantity += quantity;  

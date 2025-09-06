@@ -6,11 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
     "bootstrap": "^5.3.3",
+    "export": "^0.1.337",
     "next": "14.2.4",
     "react": "^18",
     "react-18-image-lightbox": "^5.1.4",

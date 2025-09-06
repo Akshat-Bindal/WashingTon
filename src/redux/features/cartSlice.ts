@@ -8,15 +8,15 @@ interface Product {
   id: string;
   title: string;
   quantity: number;
+  price: number;    // ✅ added price
   // Add other properties here if needed
 }
 interface CartState {
   cart: Product[];
-  orderQuantity: number,
 }
+
 const initialState: CartState = {
   cart: [],
-  orderQuantity: 1,
 };
 
 const cartSlice = createSlice({

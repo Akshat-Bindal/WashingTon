@@ -21,7 +21,7 @@ const Cart = () => {
 
 	return (
 		<>
-			<HeaderTwo links="shop-grid" title="My Cart" />
+			<HeaderTwo links="home" title="My Cart" />
 			{content} 
 			<Footer />
 			<ToastContainer position="top-right" />
