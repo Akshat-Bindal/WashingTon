@@ -1,5 +1,3 @@
-
-
 import { toast } from "react-toastify";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { getLocalStorage, setLocalStorage } from "@/utils/localstorage"; 
@@ -8,15 +6,18 @@ interface Product {
   id: string;
   title: string;
   quantity: number;
-  price: number;    // ✅ added price
-  // Add other properties here if needed
+  price: number;
+  // Add other properties if needed
 }
+
 interface CartState {
   cart: Product[];
+  orderQuantity: number;   // ✅ added here
 }
 
 const initialState: CartState = {
   cart: [],
+  orderQuantity: 1,        // ✅ default value
 };
 
 const cartSlice = createSlice({
@@ -39,17 +40,14 @@ const cartSlice = createSlice({
       }
       setLocalStorage("cart", state.cart);
     },
-    //
-    increment: (state, { payload }) => {
-      state.orderQuantity = state.orderQuantity + 1;
+
+    increment: (state) => {
+      state.orderQuantity += 1;
     },
-    decrement: (state, { payload }) => {
-      state.orderQuantity =
-        state.orderQuantity > 1
-          ? state.orderQuantity - 1
-          : (state.orderQuantity = 1);
+
+    decrement: (state) => {
+      state.orderQuantity = state.orderQuantity > 1 ? state.orderQuantity - 1 : 1;
     },
-    //
 
     decrease_quantity: (state, { payload }: PayloadAction<Product>) => {
       const cartIndex = state.cart.findIndex((item) => item.id === payload.id);
@@ -61,6 +59,7 @@ const cartSlice = createSlice({
       }
       setLocalStorage("cart", state.cart);
     },
+
     remove_cart_product: (state, { payload }: PayloadAction<Product>) => {
       state.cart = state.cart.filter((item) => item.id !== payload.id);
       toast.error(`Remove from your cart`, {
@@ -68,6 +67,7 @@ const cartSlice = createSlice({
       });
       setLocalStorage("cart", state.cart);
     },
+
     clear_cart: (state) => {
       const confirmMsg = window.confirm("Are you sure you want to delete your bag?");
       if (confirmMsg) {
@@ -75,9 +75,11 @@ const cartSlice = createSlice({
       }
       setLocalStorage("cart", state.cart);
     },
+
     get_cart_products: (state) => {
       state.cart = getLocalStorage<Product>("cart");
     },
+
     quantityDecrement: (state, { payload }: PayloadAction<Product>) => {
       state.cart = state.cart.map((item) => {
         if (item.id === payload.id && item.quantity > 1) {
@@ -102,5 +104,3 @@ export const {
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
-
-
