@@ -43,7 +43,7 @@ const Header = () => {
 						{/* Profile */}
 						<div className="user-profile-icon ms-2">
 							<Link href="/profile">
-								<img src="/assets/img/core-img/profile1.png" alt="Profile" />
+								<img src="/assets/img/core-img/avatar.jpg" alt="Profile" />
 							</Link>
 						</div>
 

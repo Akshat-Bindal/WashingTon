@@ -2,20 +2,27 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { fetchWithAuth } from "@/utils/api";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [loading, setLoading] = useState(false);
   const [passwordError, setPasswordError] = useState("");
   const [confirmError, setConfirmError] = useState("");
-  const router = useRouter(); // ✅ Next.js router
+  const router = useRouter();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     let isValid = true;
 
-    // ✅ Password length check
     if (password.length < 8) {
       setPasswordError("❌ Password must be at least 8 characters long.");
       isValid = false;
@@ -23,7 +30,6 @@ const Register = () => {
       setPasswordError("");
     }
 
-    // ✅ Confirm password check
     if (password !== confirmPassword) {
       setConfirmError("❌ Passwords do not match.");
       isValid = false;
@@ -33,12 +39,43 @@ const Register = () => {
 
     if (!isValid) return;
 
-    // ✅ Redirect to OtpConfirm page
-    router.push("/otp-confirm");
+    setLoading(true);
+
+    try {
+      await fetchWithAuth("/api/auth/register", {
+        method: "POST",
+        body: JSON.stringify({
+        name,
+        email,
+        phone,
+        password,
+        addresses: [address],
+        }),
+      });
+
+      toast.success("🎉 Registration successful! Please verify OTP.", {
+        position: "top-center",
+        autoClose: 2000,
+      });
+
+      // Pass email in query string so OTP page knows who to verify
+      setTimeout(() => {
+        router.push(`/otp-confirm?email=${encodeURIComponent(email)}`);
+      }, 2200);
+    } catch (err) {
+      if (err instanceof Error) {
+        toast.error(err.message, { position: "top-center" });
+      } else {
+        toast.error("Something went wrong", { position: "top-center" });
+      }
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <>
+      <ToastContainer />
       <div className="login-wrapper d-flex align-items-center justify-content-center text-center">
         <div className="background-shape"></div>
         <div className="container">
@@ -49,7 +86,6 @@ const Register = () => {
 
               <div className="register-form mt-5">
                 <form onSubmit={handleSubmit}>
-                  {/* Full Name */}
                   <div className="form-group text-start mb-4">
                     <span>Full Name</span>
                     <label htmlFor="name">
@@ -60,11 +96,12 @@ const Register = () => {
                       id="name"
                       type="text"
                       placeholder="Enter your full name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                       required
                     />
                   </div>
 
-                  {/* Contact */}
                   <div className="form-group text-start mb-4">
                     <span>Contact Number</span>
                     <label htmlFor="contact">
@@ -75,11 +112,12 @@ const Register = () => {
                       id="contact"
                       type="tel"
                       placeholder="Enter your contact number"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
                       required
                     />
                   </div>
 
-                  {/* Address */}
                   <div className="form-group text-start mb-4">
                     <span>Address</span>
                     <label htmlFor="address">
@@ -90,11 +128,12 @@ const Register = () => {
                       id="address"
                       type="text"
                       placeholder="Enter your address"
+                      value={address}
+                      onChange={(e) => setAddress(e.target.value)}
                       required
                     />
                   </div>
 
-                  {/* Email */}
                   <div className="form-group text-start mb-4">
                     <span>Email</span>
                     <label htmlFor="email">
@@ -105,11 +144,12 @@ const Register = () => {
                       id="email"
                       type="email"
                       placeholder="help@example.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       required
                     />
                   </div>
 
-                  {/* Password */}
                   <div className="form-group text-start mb-2">
                     <span>Password</span>
                     <label htmlFor="password">
@@ -129,7 +169,6 @@ const Register = () => {
                     <p className="text-danger small mt-1">{passwordError}</p>
                   )}
 
-                  {/* Confirm Password */}
                   <div className="form-group text-start mb-2">
                     <span>Confirm Password</span>
                     <label htmlFor="confirmPassword">
@@ -149,12 +188,12 @@ const Register = () => {
                     <p className="text-danger small mt-1">{confirmError}</p>
                   )}
 
-                  {/* Submit */}
                   <button
                     className="btn btn-warning btn-lg w-100 mt-3"
                     type="submit"
+                    disabled={loading}
                   >
-                    Sign Up
+                    {loading ? "Signing Up..." : "Sign Up"}
                   </button>
                 </form>
               </div>

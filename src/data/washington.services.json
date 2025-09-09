@@ -1,0 +1,1116 @@
+[{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e570"
+  },
+  "name": "WoolenSweater",
+  "description": "Laundry service for WoolenSweater",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061988/WoolenSweater150_g8t2m1.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e571"
+  },
+  "name": "WoolenJacket",
+  "description": "Laundry service for WoolenJacket",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061987/WoolenJacket150_lpyx4d.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e572"
+  },
+  "name": "WoolenCap",
+  "description": "Laundry service for WoolenCap",
+  "price": 50,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061986/WoolenCap50_iqrll2.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e573"
+  },
+  "name": "WindCheater",
+  "description": "Laundry service for WindCheater",
+  "price": 120,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061985/WindCheater120_mimjgr.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e574"
+  },
+  "name": "Turban",
+  "description": "Laundry service for Turban",
+  "price": 130,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061984/Turban130_lvfhqe.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e575"
+  },
+  "name": "Tshirt",
+  "description": "Laundry service for Tshirt",
+  "price": 70,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061983/Tshirt70_eyomyf.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e576"
+  },
+  "name": "Trouser",
+  "description": "Laundry service for Trouser",
+  "price": 70,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061982/Trouser70_tuibyc.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e577"
+  },
+  "name": "TrackSuit",
+  "description": "Laundry service for TrackSuit",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061981/TrackSuit150_kwfm7p.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e578"
+  },
+  "name": "Sweater",
+  "description": "Laundry service for Sweater",
+  "price": 120,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061981/Sweater120_jzygcp.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e579"
+  },
+  "name": "Socks",
+  "description": "Laundry service for Socks",
+  "price": 50,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061980/Socks50_tyaezi.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e57a"
+  },
+  "name": "Shirt Tshirt",
+  "description": "Laundry service for Shirt Tshirt",
+  "price": 120,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061979/Shirt_Tshirt_120_dwmorz.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e57b"
+  },
+  "name": "Shirt",
+  "description": "Laundry service for Shirt",
+  "price": 70,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061978/Shirt_70_rkmueo.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e57c"
+  },
+  "name": "Shervani",
+  "description": "Laundry service for Shervani",
+  "price": 250,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061977/Shervani250_jvv2fg.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e57d"
+  },
+  "name": "Shawl",
+  "description": "Laundry service for Shawl",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061976/Shawl150_kxzsaj.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e57e"
+  },
+  "name": "Rain Coat",
+  "description": "Laundry service for Rain Coat",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061975/Rain_Coat_150_jczr71.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e57f"
+  },
+  "name": "PufferJacket",
+  "description": "Laundry service for PufferJacket",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061974/PufferJacket150_ymn34o.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e580"
+  },
+  "name": "Pant",
+  "description": "Laundry service for Pant",
+  "price": 70,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061974/Pant_70_hzuzjb.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e581"
+  },
+  "name": "Muffler",
+  "description": "Laundry service for Muffler",
+  "price": 50,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061973/Muffler50_bj9qce.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e582"
+  },
+  "name": "LongCoat",
+  "description": "Laundry service for LongCoat",
+  "price": 180,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061972/LongCoat180_zm0oqt.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e583"
+  },
+  "name": "LeatherJacket",
+  "description": "Laundry service for LeatherJacket",
+  "price": 200,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061972/LeatherJacket200_wgp6ps.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e584"
+  },
+  "name": "Kurta80",
+  "description": "Laundry service for Kurta80",
+  "price": 120,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061971/Kurta80_120_jq6t13.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e585"
+  },
+  "name": "KurtaPajma",
+  "description": "Laundry service for KurtaPajma",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061971/KurtaPajma150_tvrpfh.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e586"
+  },
+  "name": "Jeans",
+  "description": "Laundry service for Jeans",
+  "price": 70,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061970/Jeans_70_w2ylmb.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e587"
+  },
+  "name": "Jogger",
+  "description": "Laundry service for Jogger",
+  "price": 70,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061970/Jogger70_s8ixgo.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e588"
+  },
+  "name": "Jacket",
+  "description": "Laundry service for Jacket",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061969/Jacket150_v5hyma.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e589"
+  },
+  "name": "Hats",
+  "description": "Laundry service for Hats",
+  "price": 80,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061969/Hats80_jgavqa.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e58a"
+  },
+  "name": "DenimJacket",
+  "description": "Laundry service for DenimJacket",
+  "price": 120,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061969/DenimJacket120_npajr6.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e58b"
+  },
+  "name": "3PC Suit",
+  "description": "Laundry service for 3PC Suit",
+  "price": 300,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061969/3PC_Suit300_obuocl.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e58c"
+  },
+  "name": "2Pc Suit",
+  "description": "Laundry service for 2Pc Suit",
+  "price": 200,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061968/2Pc_Suit200_x5ii8g.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e58d"
+  },
+  "name": "woolenjacket",
+  "description": "Laundry service for woolenjacket",
+  "price": 200,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062049/woolenjacket200_kixd4f.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e58e"
+  },
+  "name": "WoolenCap",
+  "description": "Laundry service for WoolenCap",
+  "price": 50,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062048/WoolenCap50_qgjzdo.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e58f"
+  },
+  "name": "WomenShawl",
+  "description": "Laundry service for WomenShawl",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062047/WomenShawl150_kkyerz.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e590"
+  },
+  "name": "wintercoat",
+  "description": "Laundry service for wintercoat",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062046/wintercoat150_cira8d.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e591"
+  },
+  "name": "Top",
+  "description": "Laundry service for Top",
+  "price": 70,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062045/Top70_pgqidr.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e592"
+  },
+  "name": "Top3",
+  "description": "Laundry service for Top3",
+  "price": 70,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062043/Top3-70_rtocxg.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e593"
+  },
+  "name": "Top2",
+  "description": "Laundry service for Top2",
+  "price": 70,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062043/Top2-70_ncktyp.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e594"
+  },
+  "name": "sweater",
+  "description": "Laundry service for sweater",
+  "price": 0,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062042/sweater_otoufb.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e595"
+  },
+  "name": "suit",
+  "description": "Laundry service for suit",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062042/suit150_yu7ypt.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e596"
+  },
+  "name": "Socks",
+  "description": "Laundry service for Socks",
+  "price": 50,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062041/Socks50_q4xza6.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e597"
+  },
+  "name": "Skirt",
+  "description": "Laundry service for Skirt",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062039/Skirt150_gumf3k.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e598"
+  },
+  "name": "ShortSkirt",
+  "description": "Laundry service for ShortSkirt",
+  "price": 120,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062038/ShortSkirt120_mlx12s.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e599"
+  },
+  "name": "SareeNormal",
+  "description": "Laundry service for SareeNormal",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062038/SareeNormal150_hyzknw.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e59a"
+  },
+  "name": "SareeHeavy",
+  "description": "Laundry service for SareeHeavy",
+  "price": 250,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062037/SareeHeavy250_cmkokl.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e59b"
+  },
+  "name": "saraha",
+  "description": "Laundry service for saraha",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062036/saraha150_eeqlsy.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e59c"
+  },
+  "name": "RajputiDress",
+  "description": "Laundry service for RajputiDress",
+  "price": 250,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062035/RajputiDress250_ixjq2o.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e59d"
+  },
+  "name": "RainCoat",
+  "description": "Laundry service for RainCoat",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062034/RainCoat150_qxm8mo.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e59e"
+  },
+  "name": "NightSuit",
+  "description": "Laundry service for NightSuit",
+  "price": 180,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062033/NightSuit180_v68m0s.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e59f"
+  },
+  "name": "longcoar",
+  "description": "Laundry service for longcoar",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062032/longcoar150_ooocts.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5a0"
+  },
+  "name": "LehengaNormal",
+  "description": "Laundry service for LehengaNormal",
+  "price": 200,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062031/LehengaNormal200_huqaro.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5a1"
+  },
+  "name": "LehengaHeavy",
+  "description": "Laundry service for LehengaHeavy",
+  "price": 250,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062030/LehengaHeavy250_hhdpno.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5a2"
+  },
+  "name": "LehengaChunni",
+  "description": "Laundry service for LehengaChunni",
+  "price": 300,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062029/LehengaChunni300_b20ijx.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5a3"
+  },
+  "name": "LehengaBlouse",
+  "description": "Laundry service for LehengaBlouse",
+  "price": 250,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062028/LehengaBlouse250_r5oqrv.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5a4"
+  },
+  "name": "Kurti",
+  "description": "Laundry service for Kurti",
+  "price": 50,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062028/Kurti50_grwdbp.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5a5"
+  },
+  "name": "KurtaTop",
+  "description": "Laundry service for KurtaTop",
+  "price": 70,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062027/KurtaTop70_i9nnd3.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5a6"
+  },
+  "name": "kidsfrock",
+  "description": "Laundry service for kidsfrock",
+  "price": 50,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062026/kidsfrock50_du2nvj.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5a7"
+  },
+  "name": "Jeans",
+  "description": "Laundry service for Jeans",
+  "price": 70,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062025/Jeans70_nwull7.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5a8"
+  },
+  "name": "JacketLeather",
+  "description": "Laundry service for JacketLeather",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062024/JacketLeather150_fy3dh0.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5a9"
+  },
+  "name": "HeavySkirt",
+  "description": "Laundry service for HeavySkirt",
+  "price": 180,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062023/HeavySkirt180_ehgvii.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5aa"
+  },
+  "name": "HeavyLehengaChunni",
+  "description": "Laundry service for HeavyLehengaChunni",
+  "price": 350,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062023/HeavyLehengaChunni350_d8qnvp.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5ab"
+  },
+  "name": "gown",
+  "description": "Laundry service for gown",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062022/gown150_bn2ljj.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5ac"
+  },
+  "name": "FrockCan",
+  "description": "Laundry service for FrockCan",
+  "price": 250,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062021/FrockCan250_ezyvs3.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5ad"
+  },
+  "name": "frock",
+  "description": "Laundry service for frock",
+  "price": 120,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062020/frock120_fkqgxx.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5ae"
+  },
+  "name": "FormalSuit",
+  "description": "Laundry service for FormalSuit",
+  "price": 200,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062020/FormalSuit200_y80mjh.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5af"
+  },
+  "name": "FormalDress",
+  "description": "Laundry service for FormalDress",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062019/FormalDress150_a4uqvc.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5b0"
+  },
+  "name": "Formalcoat",
+  "description": "Laundry service for Formalcoat",
+  "price": 250,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062018/Formalcoat250_nwpksy.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5b1"
+  },
+  "name": "Dupatta",
+  "description": "Laundry service for Dupatta",
+  "price": 120,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062018/Dupatta120_jko80i.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5b2"
+  },
+  "name": "DenimDress",
+  "description": "Laundry service for DenimDress",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062017/DenimDress150_wljbwa.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5b3"
+  },
+  "name": "Coat",
+  "description": "Laundry service for Coat",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062016/Coat150_jj80uz.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5b4"
+  },
+  "name": "Blouse",
+  "description": "Laundry service for Blouse",
+  "price": 50,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062016/Blouse50_lv1lbx.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5b5"
+  },
+  "name": "1",
+  "description": "Laundry service for 1",
+  "price": 25,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062015/125_h4pasn.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5b6"
+  },
+  "name": "3",
+  "description": "Laundry service for 3",
+  "price": 0,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062014/30_lfdgu1.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5b7"
+  },
+  "name": "1",
+  "description": "Laundry service for 1",
+  "price": 9,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062014/19_fvtt7m.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5b8"
+  },
+  "name": "1PC",
+  "description": "Laundry service for 1PC",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062013/1PC150_s5waxd.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5b9"
+  },
+  "name": "ToyLarge",
+  "description": "Laundry service for ToyLarge",
+  "price": 250,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062365/ToyLarge250_o0zysq.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5ba"
+  },
+  "name": "Towel",
+  "description": "Laundry service for Towel",
+  "price": 70,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062364/Towel70_xe4xld.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5bb"
+  },
+  "name": "SofaPillow",
+  "description": "Laundry service for SofaPillow",
+  "price": 80,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062363/SofaPillow80_evrji3.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5bc"
+  },
+  "name": "SimpleBlanket",
+  "description": "Laundry service for SimpleBlanket",
+  "price": 250,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062362/SimpleBlanket250_vcf60q.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5bd"
+  },
+  "name": "Shoe",
+  "description": "Laundry service for Shoe",
+  "price": 250,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062361/Shoe250_edxkx5.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5be"
+  },
+  "name": "SB Blanket",
+  "description": "Laundry service for SB Blanket",
+  "price": 300,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062360/SB_Blanket300_jblrnn.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5bf"
+  },
+  "name": "SB Bedsheet",
+  "description": "Laundry service for SB Bedsheet",
+  "price": 100,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062359/SB_Bedsheet100_maxk7n.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5c0"
+  },
+  "name": "QuiltCover SB",
+  "description": "Laundry service for QuiltCover SB",
+  "price": 120,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062358/QuiltCover_SB120_e8fin1.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5c1"
+  },
+  "name": "QuiltCover DB",
+  "description": "Laundry service for QuiltCover DB",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062357/QuiltCover_DB150_kf7psk.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5c2"
+  },
+  "name": "Pillow",
+  "description": "Laundry service for Pillow",
+  "price": 120,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062356/Pillow120_tt5w7h.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5c3"
+  },
+  "name": "Gloves",
+  "description": "Laundry service for Gloves",
+  "price": 50,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062355/Gloves50_f5vhwz.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5c4"
+  },
+  "name": "DB Blanket",
+  "description": "Laundry service for DB Blanket",
+  "price": 350,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062355/DB_Blanket350_mlfnme.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5c5"
+  },
+  "name": "DB Bedsheet",
+  "description": "Laundry service for DB Bedsheet",
+  "price": 120,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062354/DB_Bedsheet120_shfuns.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5c6"
+  },
+  "name": "CurtainNormal",
+  "description": "Laundry service for CurtainNormal",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062353/CurtainNormal150_ftysvb.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5c7"
+  },
+  "name": "CurtainFolder",
+  "description": "Laundry service for CurtainFolder",
+  "price": 200,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062352/CurtainFolder200_bf3fo4.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5c8"
+  },
+  "name": "BagSmall",
+  "description": "Laundry service for BagSmall",
+  "price": 100,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062352/BagSmall100_dqnmlo.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5c9"
+  },
+  "name": "BagLarge",
+  "description": "Laundry service for BagLarge",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062351/BagLarge150_ndygbe.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5ca"
+  },
+  "name": "AcBlanket",
+  "description": "Laundry service for AcBlanket",
+  "price": 250,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062351/AcBlanket250_h60uc0.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5cb"
+  },
+  "name": "ToySmall",
+  "description": "Laundry service for ToySmall",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062350/ToySmall150_h3a7vq.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5cc"
+  },
+  "name": "ToyMedium",
+  "description": "Laundry service for ToyMedium",
+  "price": 200,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062349/ToyMedium200_ujpu8w.png"
+}]
