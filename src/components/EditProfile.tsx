@@ -1,9 +1,101 @@
 "use client";
 import Footer from "@/layouts/Footer";
 import HeaderTwo from "@/layouts/HeaderTwo";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const EditProfile = () => {
+	const [userData, setUserData] = useState({
+		name: "",
+		phone: "",
+		email: "",
+		shipping: "",
+		profilePicture: "",
+	});
+	const [loading, setLoading] = useState(true);
+
+	// Fetch user data on mount
+	useEffect(() => {
+		const fetchUserData = async () => {
+			try {
+				const res = await fetch(
+					"https://laundry-backend-fg99.onrender.com/api/users/me",
+					{
+						method: "GET",
+						headers: {
+							"Content-Type": "application/json",
+							Authorization: `Bearer ${localStorage.getItem("token")}`,
+						},
+					}
+				);
+				const data = await res.json();
+				if (data) {
+					setUserData({
+						name: data.name || "",
+						phone: data.phone || "",
+						email: data.email || "",
+						shipping: data.addresses?.[0] || "",
+						profilePicture: data.profilePicture || "",
+					});
+				}
+				setLoading(false);
+			} catch (error) {
+				console.error(error);
+				setLoading(false);
+			}
+		};
+
+		fetchUserData();
+	}, []);
+
+	// Handle input changes
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const { name, value } = e.target;
+		setUserData((prev) => ({ ...prev, [name]: value }));
+	};
+
+	// Handle form submit
+	const handleSubmit = async (e: React.FormEvent) => {
+		e.preventDefault();
+		try {
+			const res = await fetch(
+				"https://laundry-backend-fg99.onrender.com/api/users/me",
+				{
+					method: "PUT", // ✅ use PATCH
+					headers: {
+						"Content-Type": "application/json",
+						Authorization: `Bearer ${localStorage.getItem("token")}`,
+					},
+					body: JSON.stringify({
+						name: userData.name,
+						phone: userData.phone,
+						addresses: [userData.shipping],
+					}),
+				}
+			);
+
+			const data = await res.json();
+			if (res.ok) {
+				toast.success("🎉 Profile updated successfully!", {
+					position: "top-center",
+					autoClose: 3000,
+				});
+			} else {
+				toast.error("⚠️ Something went wrong", {
+					position: "top-center",
+					autoClose: 3000,
+				});
+			}
+
+		} catch (error) {
+			console.error(error);
+			alert("Something went wrong");
+		}
+	};
+
+	if (loading) return <p>Loading...</p>;
+
 	return (
 		<>
 			<HeaderTwo links="profile" title="Edit Profile" />
@@ -14,87 +106,72 @@ const EditProfile = () => {
 						<div className="card user-info-card">
 							<div className="card-body p-4 d-flex align-items-center">
 								<div className="user-profile me-3">
-									<img src="/assets/img/bg-img/9.jpg" alt="" />
+									{/* Profile picture is fetched here */}
+									<img
+										src={userData.profilePicture || "/assets/img/core-img/avatar.jpg"}
+										alt="Profile"
+									/>
 									<div className="change-user-thumb">
 										<form onSubmit={(e) => e.preventDefault()}>
 											<input className="form-control-file" type="file" />
-											<button>
-												<i className="ti ti-pencil"></i>
-											</button>
 										</form>
 									</div>
 								</div>
 								<div className="user-info">
-									<p className="mb-0 text-white">@Vikram_saini17</p>
-									<h5 className="mb-0 text-white">Vikram Saini</h5>
+									<h5 className="mb-0 text-white">{userData.name}</h5>
 								</div>
 							</div>
 						</div>
 
 						<div className="card user-data-card">
 							<div className="card-body">
-								<form action="" method="">
+								<form onSubmit={handleSubmit}>
 									<div className="mb-3">
-										<div className="title mb-2">
-											<i className="ti ti-at"></i>
-											<span>Username</span>
-										</div>
+										<label className="form-label">Full Name</label>
 										<input
 											className="form-control"
 											type="text"
-											value="Vikram_saini17"
+											name="name" // ✅ match state
+											value={userData.name}
+											onChange={handleChange}
 										/>
 									</div>
+
 									<div className="mb-3">
-										<div className="title mb-2">
-											<i className="ti ti-user"></i>
-											<span>Full Name</span>
-										</div>
+										<label className="form-label">Phone</label>
 										<input
 											className="form-control"
 											type="text"
-											value="Vikram Saini"
-											disabled
+											name="phone"
+											value={userData.phone}
+											onChange={handleChange}
 										/>
 									</div>
+
 									<div className="mb-3">
-										<div className="title mb-2">
-											<i className="ti ti-phone"></i>
-											<span>Phone</span>
-										</div>
-										<input
-											className="form-control"
-											type="text"
-											value="+91 9166572817"
-										/>
-									</div>
-									<div className="mb-3">
-										<div className="title mb-2">
-											<i className="ti ti-mail"></i>
-											<span>Email Address</span>
-										</div>
+										<label className="form-label">Email (read-only)</label>
 										<input
 											className="form-control"
 											type="email"
-											value="Vikramsaini9618@gmail.com"
+											name="email"
+											value={userData.email}
+											disabled // ✅ backend does not update email
 										/>
 									</div>
+
 									<div className="mb-3">
-										<div className="title mb-2">
-											<i className="ti ti-location"></i>
-											<span>Shipping Address</span>
-										</div>
+										<label className="form-label">Shipping Address</label>
 										<input
 											className="form-control"
 											type="text"
-											value="Q.no 334 Rajasthan Police Academy Jaipur"
+											name="shipping"
+											value={userData.shipping}
+											onChange={handleChange}
 										/>
 									</div>
-									<button
-										className="btn btn-primary btn-lg w-100"
-										type="submit"
-									>
-										Save All Changes
+
+									<button className="btn btn-primary btn-lg w-100" type="submit">
+										Save Changes
 									</button>
 								</form>
 							</div>
@@ -102,9 +179,7 @@ const EditProfile = () => {
 					</div>
 				</div>
 			</div>
-
-			<div className="internet-connection-status" id="internetStatus"></div>
-
+			<ToastContainer />
 			<Footer />
 		</>
 	);

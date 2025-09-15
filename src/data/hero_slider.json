@@ -1,0 +1,30 @@
+[
+  {
+    "_id": { "$oid": "68bc4a637f463f14c3b1e575" },
+    "name": "Dry Clean",
+    "price": 300,
+    "description": "Your Dirty Clothes",
+    "imageUrl": "/assets/img/bg-img/a2.png"
+  },
+  {
+    "_id": { "$oid": "68bc4a637f463f14c3b1e576" },
+    "name": "Wash & Fold",
+    "price": 40,
+    "description": "Now only ₹40 per kg",
+    "imageUrl": "/assets/img/bg-img/a1.png"
+  },
+  {
+    "_id": { "$oid": "68bc4a637f463f14c3b1e577" },
+    "name": "Wash & Iron",
+    "price": 75,
+    "description": "Now only ₹75 per kg",
+    "imageUrl": "/assets/img/bg-img/a5.png"
+  },
+  {
+    "_id": { "$oid": "68bc4a637f463f14c3b1e578" },
+    "name": "Sofa Care",
+    "price": 300,
+    "description": "₹300 per Seat",
+    "imageUrl": "/assets/img/bg-img/a4.png"
+  }
+]

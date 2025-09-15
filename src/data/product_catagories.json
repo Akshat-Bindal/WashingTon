@@ -1,0 +1,90 @@
+[{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5cd"
+  },
+  "name": "Wash & Fold",
+  "description": "Standard wash and fold service",
+  "price": 40,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e56a"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757590255/washfold_aol4ms.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5ce"
+  },
+  "name": "Wash & Iron",
+  "description": "Wash and ironing service",
+  "price": 75,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e56a"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757590268/washiron_reuylq.png"
+},
+{
+  "name": "Dry Clean",
+  "price":100,
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757688511/dryclean_llqo18.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5bd"
+  },
+  "name": "Shoe",
+  "description": "Laundry service for Shoe",
+  "price": 250,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062361/Shoe250_edxkx5.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5cf"
+  },
+  "name": "Fabric Dyeing",
+  "description": "Fabric dyeing service",
+  "price": 250,
+  "category": {
+    "$oid": "68c428bc8c7d8aa30e3d4616"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757590470/7_lzuhn1.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5d0"
+  },
+  "name": "Carpet Cleaning",
+  "description": "Carpet deep cleaning service",
+  "price": 1000,
+  "category": {
+    "$oid": "68c428bc8c7d8aa30e3d4616"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757590462/8_ne9oy8.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5d1"
+  },
+  "name": "Fabric Darning",
+  "description": "Fabric repair and darning service",
+  "price": 250,
+  "category": {
+    "$oid": "68c428bc8c7d8aa30e3d4616"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757590454/6_ocz9bq.png"
+},
+{
+  "_id": {
+    "$oid": "68c427788c7d8aa30e3d4612"
+  },
+  "name": "Sofa Chair",
+  "description": "dry clean your sofa at cost of per chair",
+  "price": 300,
+  "category": {
+    "$oid": "68c428bc8c7d8aa30e3d4616"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757590319/1_ajcmi5.png"
+}
+]

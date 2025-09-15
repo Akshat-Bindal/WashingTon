@@ -2,45 +2,102 @@
 import Footer from "@/layouts/Footer";
 import HeaderTwo from "@/layouts/HeaderTwo";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Count from "./common/Count";
 import UseCartInfo from "@/hooks/UseCartInfo";
+import { fetchWithAuth } from "@/utils/api";
+import { useRouter } from "next/navigation";
 
 const Checkout = () => {
+  const router = useRouter(); // ✅ moved inside component
   const { total } = UseCartInfo();
   const [laundryType, setLaundryType] = useState("sameDay");
-  const [extraCharge, setExtraCharge] = useState(50); // default to Same Day
+  const [extraCharge, setExtraCharge] = useState(200);
   const [orderPlaced, setOrderPlaced] = useState(false);
 
-  // Calculate final total
+  const [user, setUser] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  // ✅ Fetch billing info
+  useEffect(() => {
+    const loadUser = async () => {
+      try {
+        const data = await fetchWithAuth("/api/users/me", {}, true);
+        setUser({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          address: data.addresses?.[0] || "Not provided",
+        });
+      } catch (err) {
+        console.error("Error loading profile:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadUser();
+  }, []);
+
   const finalTotal = total + extraCharge;
 
-  const handleLaundryChange = (type: string, charge: number) => {
+  const handleLaundryChange = (type: string, charge: number): void => {
     setLaundryType(type);
     setExtraCharge(charge);
   };
 
-  const handleConfirmOrder = () => {
-    // Save order data (mock, can be replaced with API call or localStorage)
-    const orderData = {
-      name: "SUHA JANNAT",
-      email: "care@example.com",
-      phone: "+880 000 111 222",
-      address: "28/C Green Road, BD",
-      laundryType,
-      extraCharge,
-      total: finalTotal,
-    };
+  const handleConfirmOrder = async (): Promise<void> => {
+    try {
+      const cartItems = JSON.parse(localStorage.getItem("cart") || "[]");
 
-    localStorage.setItem("latestOrder", JSON.stringify(orderData));
+      const services = cartItems.map((item: any) => {
+        if (!item.service) {
+          throw new Error(`Cart item "${item.title}" is missing service ID`);
+        }
+        return {
+          service: item.service,
+          quantity: item.quantity || 1,
+        };
+      });
 
-    // Show success message
-    setOrderPlaced(true);
+      let urgency = "normal";
+      if (laundryType === "nextDay") urgency = "next-day";
+      if (laundryType === "sameDay") urgency = "same-day";
 
-    // Auto hide notification
-    setTimeout(() => {
-      setOrderPlaced(false);
-    }, 4000);
+      const shippingAddresses = user?.address || "Default Address";
+
+      const orderData = {
+        services,
+        urgency,
+        shippingAddresses,
+        pickup_time: "Morning",
+      };
+
+      const response = await fetchWithAuth(
+        "/api/orders/checkout",
+        {
+          method: "POST",
+          body: JSON.stringify(orderData),
+        },
+        true
+      );
+
+      console.log("✅ Order placed:", response);
+      setOrderPlaced(true);
+
+      localStorage.removeItem("cart");
+
+      setTimeout(() => {
+        setOrderPlaced(false);
+        router.push("/my-order"); // ✅ redirect after success
+      }, 3000);
+    } catch (err: unknown) {
+      console.error("❌ Error placing order:", err);
+      let errorMessage = "An unexpected error occurred";
+      if (err instanceof Error) errorMessage = err.message;
+      else if (typeof err === "string") errorMessage = err;
+      alert(`Failed to place order: ${errorMessage}`);
+    }
   };
 
   return (
@@ -50,7 +107,6 @@ const Checkout = () => {
       <div className="page-content-wrapper">
         <div className="container">
           <div className="checkout-wrapper-area py-3">
-
             {/* Billing Info */}
             <div className="billing-information-card mb-3">
               <div className="card billing-information-title-card">
@@ -61,43 +117,48 @@ const Checkout = () => {
 
               <div className="card user-data-card">
                 <div className="card-body">
-                  <div className="single-profile-data d-flex align-items-center justify-content-between">
-                    <div className="title d-flex align-items-center">
-                      <i className="ti ti-user"></i> <span>Full Name</span>
-                    </div>
-                    <div className="data-content">SUHA JANNAT</div>
-                  </div>
+                  {loading ? (
+                    <p>Loading billing info...</p>
+                  ) : user ? (
+                    <>
+                      <div className="single-profile-data d-flex align-items-center justify-content-between">
+                        <div className="title d-flex align-items-center">
+                          <i className="ti ti-user"></i> <span>Full Name</span>
+                        </div>
+                        <div className="data-content">{user.name}</div>
+                      </div>
+                      <div className="single-profile-data d-flex align-items-center justify-content-between">
+                        <div className="title d-flex align-items-center">
+                          <i className="ti ti-mail"></i> <span>Email Address</span>
+                        </div>
+                        <div className="data-content">{user.email}</div>
+                      </div>
+                      <div className="single-profile-data d-flex align-items-center justify-content-between">
+                        <div className="title d-flex align-items-center">
+                          <i className="ti ti-phone"></i> <span>Phone</span>
+                        </div>
+                        <div className="data-content">{user.phone}</div>
+                      </div>
+                      <div className="single-profile-data d-flex align-items-center justify-content-between">
+                        <div className="title d-flex align-items-center">
+                          <i className="ti ti-ship"></i> <span>Shipping:</span>
+                        </div>
+                        <div className="data-content">{user.address}</div>
+                      </div>
 
-                  <div className="single-profile-data d-flex align-items-center justify-content-between">
-                    <div className="title d-flex align-items-center">
-                      <i className="ti ti-mail"></i> <span>Email Address</span>
-                    </div>
-                    <div className="data-content">care@example.com</div>
-                  </div>
-
-                  <div className="single-profile-data d-flex align-items-center justify-content-between">
-                    <div className="title d-flex align-items-center">
-                      <i className="ti ti-phone"></i> <span>Phone</span>
-                    </div>
-                    <div className="data-content">+880 000 111 222</div>
-                  </div>
-
-                  <div className="single-profile-data d-flex align-items-center justify-content-between">
-                    <div className="title d-flex align-items-center">
-                      <i className="ti ti-ship"></i> <span>Shipping:</span>
-                    </div>
-                    <div className="data-content">28/C Green Road, BD</div>
-                  </div>
-
-                  {/* Buttons */}
-                  <div className="d-grid gap-2 mt-3">
-                    <Link className="btn btn-primary w-100" href="/edit-profile">
-                      Edit Billing Information
-                    </Link>
-                    <Link className="btn btn-outline-primary w-100" href="/other-address">
-                      Use Other Address
-                    </Link>
-                  </div>
+                      {/* Buttons */}
+                      <div className="d-grid gap-2 mt-3">
+                        <Link className="btn btn-primary w-100" href="/edit-profile">
+                          Edit Billing Information
+                        </Link>
+                        <Link className="btn btn-outline-primary w-100" href="/other-address">
+                          Use Other Address
+                        </Link>
+                      </div>
+                    </>
+                  ) : (
+                    <p className="text-danger">Failed to load billing info</p>
+                  )}
                 </div>
               </div>
             </div>
@@ -120,10 +181,10 @@ const Checkout = () => {
                           type="radio"
                           name="laundryType"
                           checked={laundryType === "sameDay"}
-                          onChange={() => handleLaundryChange("sameDay", 50)}
+                          onChange={() => handleLaundryChange("sameDay", 200)}
                         />
                         <label htmlFor="sameDay">
-                          Same Day Delivery <span>₹50 extra</span>
+                          Same Day Delivery <span>₹200 extra</span>
                         </label>
                         <div className="check"></div>
                       </li>
@@ -133,10 +194,10 @@ const Checkout = () => {
                           type="radio"
                           name="laundryType"
                           checked={laundryType === "nextDay"}
-                          onChange={() => handleLaundryChange("nextDay", 30)}
+                          onChange={() => handleLaundryChange("nextDay", 100)}
                         />
                         <label htmlFor="nextDay">
-                          Next Day Delivery <span>₹30 extra</span>
+                          Next Day Delivery <span>₹100 extra</span>
                         </label>
                         <div className="check"></div>
                       </li>
@@ -163,9 +224,7 @@ const Checkout = () => {
             <div className="card cart-amount-area">
               <div className="card-body d-flex align-items-center justify-content-between">
                 <h5 className="total-price mb-0">
-                  ₹ <span className="counter">
-                    <Count number={finalTotal} />
-                  </span>
+                  ₹ <span className="counter"><Count number={finalTotal} /></span>
                 </h5>
                 <button className="btn btn-primary" onClick={handleConfirmOrder}>
                   Confirm Order
@@ -182,7 +241,7 @@ const Checkout = () => {
           className="toast shadow bg-success text-white position-fixed bottom-0 end-0 m-3 p-3"
           style={{ zIndex: 9999 }}
         >
-          ✅ Your order has been placed successfully!
+          ✅ Your order has been placed successfully! Redirecting...
         </div>
       )}
 

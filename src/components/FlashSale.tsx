@@ -1,4 +1,4 @@
-import flash_sale from "@/data/flash_sale";
+import flash_sale from "@/data/flash_sale.json";
 import Footer from "@/layouts/Footer";
 import HeaderThree from "@/layouts/HeaderThree";
 import Link from "next/link";
@@ -18,8 +18,8 @@ const FlashSale = () => {
 									<div className="card flash-sale-card">
 										<div className="card-body">
 											<Link href="/single-product">
-												<img src={item.img} alt={item.title} />
-												<span className="product-title">{item.title}</span>
+												<img src={item.imageUrl} alt={item.name} />
+												<span className="product-title">{item.name}</span>
 												{/* <p className="sale-price">
 													${item.new_price}
 													<span className="real-price">${item.old_price}</span>

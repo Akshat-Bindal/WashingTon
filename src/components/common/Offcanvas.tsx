@@ -20,17 +20,6 @@ const Offcanvas = ({ handleShow, show }: any) => {
 				></button>
 
 				<div className="offcanvas-body">
-					<div className="sidenav-profile">
-						<div className="user-profile">
-							<img src="/assets/img/bg-img/9.jpg" alt="" />
-						</div>
-						<div className="user-info">
-							<h5 className="user-name mb-1 text-white">Vikram Saini</h5>
-							{/* <p className="available-balance text-white">
-								Current Balance ₹<span className="counter">99</span>
-							</p> */}
-						</div>
-					</div>
 
 					<ul className="sidenav-nav ps-0">
 						<li>
@@ -38,11 +27,11 @@ const Offcanvas = ({ handleShow, show }: any) => {
 								<i className="ti ti-user"></i>My Profile
 							</Link>
 						</li>
-						<li>
+						{/* <li>
 							<Link href="/change-password">
 								<i className="ti ti-user"></i>Change Password
 							</Link>
-						</li>
+						</li> */}
 						<li>
 							<Link href="/my-order">
 								<i className="ti ti-notebook"></i>My Order

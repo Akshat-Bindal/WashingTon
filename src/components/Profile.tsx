@@ -7,7 +7,6 @@ import React, { useEffect, useState } from "react";
 import { fetchWithAuth } from "@/utils/api";
 
 interface User {
-  username: string;
   fullName: string;
   phone: string;
   email: string;
@@ -28,7 +27,6 @@ const Profile = () => {
           true
         );
         setUser({
-          username: data.username,
           fullName: data.name,
           phone: data.phone,
           email: data.email,

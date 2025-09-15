@@ -1,23 +1,26 @@
-'use client';
-
-import top_product from "@/data/top_product";
-import Link from "next/link";
+"use client";
 import React from "react";
-import dynamic from "next/dynamic";
+import top_products from "@/data/top_products.json"; // ✅ JSON import
+import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/features/cartSlice";
 
-const MyTimer = dynamic(() => import("../common/Timer"), { ssr: false });
+interface TopProductItem {
+  _id: { $oid: string };
+  name: string;
+  price: number;
+  imageUrl: string;
+}
 
 const TopProducts = () => {
   const dispatch = useDispatch();
 
-  const handleAddToCart = (item: any) => {
+  const handleAddToCart = (item: TopProductItem) => {
     const productData = {
-      id: String(item.id),
-      img: item.img,
-      title: item.title,
-      price: Number(item.price) || 0, // ✅ Use price field
+      service: item._id.$oid, // ✅ MongoDB service ID
+      img: item.imageUrl || "/assets/img/core-img/avatar.png",
+      title: item.name,
+      price: Number(item.price) || 0,
       quantity: 1,
     };
     dispatch(addToCart(productData));
@@ -36,7 +39,7 @@ const TopProducts = () => {
 
         {/* Product Grid */}
         <div className="row g-2">
-          {top_product.map((item, i) => (
+          {top_products.map((item: TopProductItem, i: number) => (
             <div key={i} className="col-6 col-md-4">
               <div className="card product-card h-100">
                 <div className="card-body d-flex flex-column justify-content-between">
@@ -49,14 +52,14 @@ const TopProducts = () => {
                   <div className="product-thumbnail d-block">
                     <img
                       className="mb-2 img-fluid"
-                      src={item.img}
-                      alt={item.title}
+                      src={item.imageUrl}
+                      alt={item.name}
                     />
                   </div>
 
                   {/* Product Title */}
                   <p className="product-title text-center min-h-[40px] flex items-center justify-center">
-                    {item.title}
+                    {item.name}
                   </p>
 
                   {/* Price */}

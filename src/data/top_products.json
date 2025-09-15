@@ -1,0 +1,74 @@
+[
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e591"
+  },
+  "name": "Top",
+  "description": "Laundry service for Top",
+  "price": 70,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062045/Top70_pgqidr.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e586"
+  },
+  "name": "Jeans",
+  "description": "Laundry service for Jeans",
+  "price": 70,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061970/Jeans_70_w2ylmb.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5c4"
+  },
+  "name": "DB Blanket",
+  "description": "Laundry service for DB Blanket",
+  "price": 350,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e569"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062355/DB_Blanket350_mlfnme.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e5ab"
+  },
+  "name": "gown",
+  "description": "Laundry service for gown",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062022/gown150_bn2ljj.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e58c"
+  },
+  "name": "2Pc Suit",
+  "description": "Laundry service for 2Pc Suit",
+  "price": 200,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e567"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757061968/2Pc_Suit200_x5ii8g.png"
+},
+{
+  "_id": {
+    "$oid": "68bc4a637f463f14c3b1e58f"
+  },
+  "name": "WomenShawl",
+  "description": "Laundry service for WomenShawl",
+  "price": 150,
+  "category": {
+    "$oid": "68bc4a547f463f14c3b1e568"
+  },
+  "imageUrl": "https://res.cloudinary.com/dmpre4mon/image/upload/v1757062047/WomenShawl150_kkyerz.png"
+}
+]
