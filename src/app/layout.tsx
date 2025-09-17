@@ -12,12 +12,10 @@ import { AuthProvider } from "@/context/AuthContext";
 import SessionPersistence from "@/app/SessionPersistence";
 import { get_cart_products } from "@/redux/features/cartSlice";
 
-// ✅ Wrapper to dispatch cart initialization
 const AppWrapper = ({ children }: { children: ReactNode }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Load cart from localStorage on app start
     dispatch(get_cart_products());
   }, [dispatch]);
 
@@ -37,7 +35,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <Provider store={store}>
           <AuthProvider>
-            {/* ✅ Wrap children with SessionPersistence + cart loader */}
             <AppWrapper>
               <SessionPersistence>{children}</SessionPersistence>
             </AppWrapper>

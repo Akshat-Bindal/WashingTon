@@ -9,7 +9,6 @@ import DiscountCouponCard from "./home/DiscountCouponCard";
 import DarkLight from "./common/DarkLight";
 import TopProducts from "./home/TopProducts";
 import ProductCatagories from "./home/ProductCatagories";
-import WeeklyBestSellers from "./home/WeeklyBestSellers";
 import Collections from "./home/Collections";
 import { ToastContainer } from "react-toastify";
 
@@ -27,7 +26,6 @@ const Home = () => {
 				<DarkLight />
 				<TopProducts />
 				<CtaArea />
-				<WeeklyBestSellers />
 				
 				{/* <FeaturedProducts /> */}
 				<Collections />

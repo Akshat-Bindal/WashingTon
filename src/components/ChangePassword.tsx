@@ -32,8 +32,14 @@ const UserInfoCard = () => {
 };
 
 const ChangePassword = () => {
-  const searchParams = useSearchParams();
-  const token = searchParams.get("token"); // ✅ Extract token from URL
+  const [token, setToken] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      setToken(params.get("token"));
+    }
+  }, []); // ✅ Extract token from URL
 
   const [newPassword, setNewPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");

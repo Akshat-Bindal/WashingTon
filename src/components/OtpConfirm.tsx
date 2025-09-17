@@ -1,15 +1,22 @@
 "use client";
 
-import { useState, ChangeEvent, KeyboardEvent } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useState, useEffect, ChangeEvent, KeyboardEvent } from "react";
+import { useRouter } from "next/navigation";
 import { fetchWithAuth } from "@/utils/api";
 
 const OtpConfirm = () => {
   const [otp, setOtp] = useState<string[]>(new Array(6).fill(""));
   const [notification, setNotification] = useState<string>("");
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const email = searchParams.get("email"); // ✅ email passed from register
+  const [email, setEmail] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      setEmail(params.get("email"));
+    }
+  }, []);
+ // ✅ email passed from register
 
   const handleChange = (element: HTMLInputElement, index: number) => {
     const value = element.value.replace(/[^0-9]/g, "");
