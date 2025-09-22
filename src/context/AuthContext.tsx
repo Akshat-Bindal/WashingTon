@@ -4,27 +4,46 @@ import { createContext, useContext, useState, ReactNode, useEffect } from "react
 interface AuthContextType {
   token: string | null;
   setToken: (token: string | null) => void;
+  isLoading: boolean;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [token, setTokenState] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // ✅ initialize token from localStorage on mount
+  // Initialize token from localStorage on mount
   useEffect(() => {
-    const savedToken = localStorage.getItem("token");
-    if (savedToken) setTokenState(savedToken);
+    try {
+      const savedToken = localStorage.getItem("token");
+      if (savedToken) setTokenState(savedToken);
+    } catch (error) {
+      console.error("Error accessing localStorage:", error);
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
 
   const setToken = (t: string | null) => {
-    if (t) localStorage.setItem("token", t);
-    else localStorage.removeItem("token");
-    setTokenState(t);
+    try {
+      if (t) {
+        localStorage.setItem("token", t);
+      } else {
+        localStorage.removeItem("token");
+        // Also clear lastPage when logging out
+        localStorage.removeItem("lastPage");
+      }
+      setTokenState(t);
+    } catch (error) {
+      console.error("Error updating localStorage:", error);
+      // Still update state even if localStorage fails
+      setTokenState(t);
+    }
   };
 
   return (
-    <AuthContext.Provider value={{ token, setToken }}>
+    <AuthContext.Provider value={{ token, setToken, isLoading }}>
       {children}
     </AuthContext.Provider>
   );

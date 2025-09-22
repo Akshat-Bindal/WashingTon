@@ -1,14 +1,21 @@
 "use client";
 import Link from "next/link";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 const Offcanvas = ({ handleShow, show }: any) => {
+	const router = useRouter();
+
+	const handleLogout = () => {
+		localStorage.removeItem("token");
+		router.replace("/intro");
+	};
+
 	return (
 		<>
 			<div
-				className={`offcanvas offcanvas-start suha-offcanvas-wrap ${
-					show ? "show" : ""
-				}`}
+				className={`offcanvas offcanvas-start suha-offcanvas-wrap ${show ? "show" : ""
+					}`}
 				tabIndex={-1}
 				id="suhaOffcanvas"
 				aria-labelledby="suhaOffcanvasLabel"
@@ -20,83 +27,40 @@ const Offcanvas = ({ handleShow, show }: any) => {
 				></button>
 
 				<div className="offcanvas-body">
-
 					<ul className="sidenav-nav ps-0">
 						<li>
 							<Link href="/profile">
 								<i className="ti ti-user"></i>My Profile
 							</Link>
 						</li>
-						{/* <li>
-							<Link href="/change-password">
-								<i className="ti ti-user"></i>Change Password
-							</Link>
-						</li> */}
 						<li>
 							<Link href="/my-order">
 								<i className="ti ti-notebook"></i>My Order
 							</Link>
-						</li>
-						{/* <li>
-							<Link href="/notifications">
-								<i className="ti ti-bell-ringing lni-tada-effect"></i>
-								Notifications<span className="ms-1 badge badge-warning">3</span>
-							</Link>
-						</li> */}
-						<li className="suha-dropdown-menu">
-							{/* <a href="#">
-								<i className="ti ti-building-store"></i>Shop Pages
-							</a> */}
-							{/* <ul>
-								<li>
-									<Link href="/shop-grid">Shop Grid</Link>
-								</li>
-								<li>
-									<Link href="/shop-list">Shop List</Link>
-								</li>
-								<li>
-									<Link href="/single-product">Product Details</Link>
-								</li>
-								<li>
-									<Link href="/featured-products">Featured Products</Link>
-								</li>
-								<li>
-									<Link href="/flash-sale">Flash Sale</Link>
-								</li>
-							</ul> */}
 						</li>
 						<li>
 							<Link href="/pages">
 								<i className="ti ti-notebook"></i>All Pages
 							</Link>
 						</li>
-						{/* <li className="suha-dropdown-menu">
-							<Link href="/wishlist-grid">
-								<i className="ti ti-heart"></i>My Wishlist
-							</Link>
-							<ul>
-								<li>
-									<Link href="/wishlist-grid">Wishlist Grid</Link>
-								</li>
-								<li>
-									<Link href="/wishlist-list">Wishlist List</Link>
-								</li>
-							</ul>
-						</li> */}
 						<li>
 							<Link href="/settings">
 								<i className="ti ti-adjustments-horizontal"></i>Settings
 							</Link>
 						</li>
 						<li>
-							<Link href="/intro">
+					
+							<a
+								onClick={handleLogout}
+								className="text-white"  
+								style={{ cursor: "pointer" }}
+							>
 								<i className="ti ti-logout"></i>Sign Out
-							</Link>
+							</a>
 						</li>
 					</ul>
 				</div>
 			</div>
-
 		</>
 	);
 };

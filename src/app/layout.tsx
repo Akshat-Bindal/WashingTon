@@ -3,7 +3,7 @@
 import "../styles/style.css";
 import "../styles/style.scss";
 
-import React, { ReactNode, useEffect } from "react";
+import React, { ReactNode, useEffect, Suspense } from "react";
 import { Provider, useDispatch } from "react-redux";
 import store from "@/redux/store";
 import { ToastContainer } from "react-toastify";
@@ -36,7 +36,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Provider store={store}>
           <AuthProvider>
             <AppWrapper>
-              <SessionPersistence>{children}</SessionPersistence>
+              {/* 👇 Wrap SessionPersistence in Suspense */}
+              <Suspense fallback={
+                <div className="d-flex justify-content-center align-items-center vh-100">
+                  <div className="spinner-border text-warning" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                  </div>
+                </div>
+              }>
+                <SessionPersistence>{children}</SessionPersistence>
+              </Suspense>
             </AppWrapper>
             <ToastContainer position="top-right" />
           </AuthProvider>
